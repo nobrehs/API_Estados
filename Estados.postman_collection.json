@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "7c3fb885-6399-4cba-be8c-5efab03f250b",
+		"name": "Estados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Estados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}estados",
+					"host": [
+						"{{URL}}estados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Estados",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"Pernambuco\",\r\n\"sigla\":\"PE\"}"
+				},
+				"url": {
+					"raw": "{{URL}}estados",
+					"host": [
+						"{{URL}}estados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Municípios de um estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}municipios/1",
+					"host": [
+						"{{URL}}municipios"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Municipio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"Maracanaú\",\r\n\"id_estado\":\"1\"}"
+				},
+				"url": {
+					"raw": "{{URL}}municipios",
+					"host": [
+						"{{URL}}municipios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Municipio",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"Fortalezaas\"}"
+				},
+				"url": {
+					"raw": "{{URL}}municipios/1",
+					"host": [
+						"{{URL}}municipios"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Municipio",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}municipios/1",
+					"host": [
+						"{{URL}}municipios"
+					],
+					"path": [
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:5000/",
+			"type": "default"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
